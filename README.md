@@ -15,3 +15,5 @@ bardolph:
 - Restart Home Assistant
 
 # Usage
+
+See the Home Assistant description of [Service Calls](https://www.home-assistant.io/docs/scripts/service-calls/)
