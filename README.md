@@ -18,4 +18,4 @@ bardolph:
 
 See the Home Assistant description of [Service Calls](https://www.home-assistant.io/docs/scripts/service-calls/)
 
-!(https://github.com/JAAlperin/hass-bardolph/blob/master/screenshots/lscap.jpg)
+![lsrun](https://github.com/JAAlperin/hass-bardolph/blob/master/screenshots/lscap.jpg)
