@@ -30,9 +30,10 @@ def setup(hass, config):
         script = call.data.get(ATTR_SCR, '').strip()
 
         if files + folder + script == "":
-            files = call.data.get(ATTR_FLS, dict_lsrun[ATTR_FLS]).strip()
-            folder = call.data.get(ATTR_DIR, dict_lsrun[ATTR_DIR]).replace(' ','')
             script = call.data.get(ATTR_SCR, dict_lsrun[ATTR_SCR]).strip()
+
+        files = call.data.get(ATTR_FLS, dict_lsrun[ATTR_FLS]).strip()
+        folder = call.data.get(ATTR_DIR, dict_lsrun[ATTR_DIR]).replace(' ','')
 
         if script != "":
             sys.argv = ['lsrun','-s',script]
@@ -42,8 +43,9 @@ def setup(hass, config):
                 folder = folder + '/'
             sys.argv = [folder+e for e in files.split()]
             sys.argv.insert(0, 'lsrun')
-            dict_lsrun[ATTR_DIR] = folder
+
             dict_lsrun[ATTR_FLS] = files
+            dict_lsrun[ATTR_DIR] = folder
             dict_lsrun[ATTR_SCR] = ""
         
         sys.argc = len(sys.argv)
