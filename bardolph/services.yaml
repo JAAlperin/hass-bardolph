@@ -1,0 +1,55 @@
+lsrun:
+  # Description of the service
+  description: 'Runs a Bardolph script from a file or text string.'
+  # Different fields that your service accepts
+  fields:
+    # Key of the field
+    files:
+      # Description of the field
+      description: >
+        One or more script filenames separated by spaces.
+        If blank or unspecified, the most recent files or the default is used.  Default = Example.
+      # Example value that can be passed for this field
+      example: 'cycle-color.ls off-all.ls'
+    dir:
+      # Description of the field
+      description: >
+        The path to the directory which contains the script files.
+        If blank or unspecified, the most recent directory or the default is used.  Default = Example.
+      # Example value that can be passed for this field
+      example: '/config/custom_components/bardolph/scripts/'
+    script:
+      # Description of the field
+      description: >
+        The text of a script in the format used by an lsrun -s command.
+        When script text is supplied, files and directory data are ignored.  Default = "".
+      # Example value that can be passed for this field
+      example: 'on "Color Bulb"'
+    all blank:
+      # Description of the field
+      description: >
+        If files, dir, and script are blank or unspecified, the most command is re-executed.
+      # Example value that can be passed for this field
+
+lscap:
+  # Description of the service
+  description: 'Capture Light(s) State'
+  # Different fields that your service accepts
+  fields:
+    # Key of the field
+    options:
+      # Description of the field
+      description: >
+        One or more command-line options as described in the Bardolph documentation.
+        If blank or unspecified, the most recent options or the defaults are used.
+        The -p --py option currently fails.  Default = "--text"
+      # Example value that can be passed for this field
+      example: '--text --num-lights 5'
+    txtfile:
+      # Description of the field
+      description: >
+        The name the text file into which the results will be written within the '/share/bardolph/' directory.
+        If blank or unspecified, the most recent txtfile or the default is used.
+        Be very careful! Do not overwrite a needed file.  Default = Example.
+      # Example value that can be passed for this field
+      example: 'lscap.txt'
