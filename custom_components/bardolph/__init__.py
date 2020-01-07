@@ -1,5 +1,7 @@
 DOMAIN = 'bardolph'
 
+SLASH = '/'
+
 ATTR_FLS = 'files'
 ATTR_DIR = 'dir'
 ATTR_SCR = 'script'
@@ -8,7 +10,8 @@ DFLT_DIR = '/config/custom_components/bardolph/scripts/'
 DFLT_SCR = '' #'on all'
 
 ATTR_TXT = 'txtfile'
-DFLT_TXT = '/share/bardolph/lscap.txt'
+DFLT_TXT = 'lscap.txt'
+DFLT_TDR = '/share/bardolph/'
 ATTR_OPT = 'options'
 DFLT_OPT = '--text'
 
@@ -74,10 +77,16 @@ def setup(hass, config):
         dict_lscap[ATTR_OPT] = opt
         hass.states.set('bardolph.lscap', dict_lscap)
 
+        import os
+        if not os.path.exists(DFLT_TDR):
+            os.mkdir(DFLT_TDR)
+
+        txtpath = DFLT_TDR + ((SLASH + txt).split(SLASH)[-1])
+
         try:
             orig_stdout = sys.stdout
             #with open('/share/bardolph/lscap.txt', 'w') as f:
-            with open(txt, 'w') as f:
+            with open(txtpath, 'w') as f:
                 sys.stdout = f
                 snapshot.main()
         finally:

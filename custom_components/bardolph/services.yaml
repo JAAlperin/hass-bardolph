@@ -48,8 +48,8 @@ lscap:
     txtfile:
       # Description of the field
       description: >
-        The path to the text file into which the results will be written (stdout).
+        The name the text file into which the results will be written within the '/share/bardolph/' directory.
         If blank or unspecified, the most recent txtfile or the default is used.
         Be very careful! Do not overwrite a needed file.  Default = Example.
       # Example value that can be passed for this field
-      example: '/share/bardolph/lscap.txt'
+      example: 'lscap.txt'
