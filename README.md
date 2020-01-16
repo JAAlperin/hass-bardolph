@@ -6,7 +6,7 @@ Please familiarize yourself with **[Bardolph](https://bardolph.org)** before ins
 
 # Installation instructions
 
-- In HACS Settings, add "JAAlperin/hass-bardolph" as an "Integration" Custom Repository.  Then install it.
+- In HACS, install it.
 - In lieu of HACS, copy the contents of `custom_components/bardolph/` to `<your config dir>/custom_components/bardolph/`.
 - Add the following to your `configuration.yaml`:
 
