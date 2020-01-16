@@ -1,6 +1,5 @@
-hass-bardolph
-Complex LIFX behaviors via simple text scripts
-=============
+#hass-bardolph
+###Complex LIFX behaviors via simple text scripts
 
 Add [**Bardolph**](https://bardolph.org) **lsrun** and **lscap** services to Home Assistant
 
