@@ -4,5 +4,5 @@
   "documentation": "https://www.bardolph.org/doc/docs/main.html",
   "dependencies": [],
   "codeowners": ["al-fontes-jr","JAAlperin"],
-  "requirements": ["bardolph==0.0.23","lifxlan==1.2.5","bitstring==3.1.6","netifaces==0.10.9"]
+  "requirements": ["bardolph==0.0.44","lifxlan==1.2.5","bitstring==3.1.6","netifaces==0.10.9"]
 }
