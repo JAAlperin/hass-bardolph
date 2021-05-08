@@ -1,6 +1,7 @@
 {
   "domain": "bardolph",
   "name": "Bardolph",
+  "version": "1.0.1",
   "documentation": "https://www.bardolph.org/doc/docs/main.html",
   "dependencies": [],
   "codeowners": ["al-fontes-jr","JAAlperin"],
